@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #dde6ee;
+}
+.accordian-wrapper {
+  max-width: 82.5rem;
+  margin: 6.25rem 0rem;
+  display: flex;
+  width: 100%;
+  background-color: #dde6ee;
+  height: 570px;
+  gap: 24px;
+}
+
+.accordian {
+  display: flex;
+  width: 13.89%;
+  background-color: gray;
+  border-radius: 10px;
+  position: relative;
+  height: 100%;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  align-items: flex-end;
+}
+
+.accordian.active {
+  width: 47.78%;
+  transition: all 500ms ease;
+}
+
+.accordian-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0px 21px 48px 26px;
+}
+
+.accordian-open-content {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0s ease, visibility 0s 0s;
+}
+
+.accordian.active .accordian-open-content {
+  visibility: visible;
+  position: static;
+  opacity: 1;
+  transition: opacity 0.3s ease 0.3s, visibility 0.3s ease 0.3s;
+}
+
+.accordian.active .accordian-closed-content {
+  display: none;
+}
+
+.accordian-number {
+  font-family: Avenir;
+
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 44px;
+  letter-spacing: -0.03em;
+  color: #ffffff80;
+}
+
+.accordian-name {
+  font-family: Avenir;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 23.4px;
+  text-align: left;
+  color: #fff;
+}
+
+.accordian-title {
+  font-family: Avenir;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 30.6px;
+  text-align: left;
+  color: #ffffffcc;
+}
+
+.accordian-desc {
+  color: #ffffffcc;
+  font-family: Avenir;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: left;
+}
+
+.video-button-container {
+  display: none;
+  top: 50%;
+  position: absolute;
+  left: 50%;
+  z-index: 99;
+
+  transform: translate(-50%, -50%);
+}
+
+.accordian.active .video-button-container {
+  display: block;
+}
+
+.video-container {
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.video-container video {
+  height: 100%;
+  width: 100%;
+  display: none;
+
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.pause-button {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .accordian-wrapper {
+    max-width: 82.5rem;
+    margin: 6.25rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #dde6ee;
+    height: 570px;
+    gap: 24px;
+  }
+
+  .accordian {
+    display: flex;
+    width: 100%;
+    background-color: gray;
+    border-radius: 10px;
+    position: relative;
+    height: 10rem;
+    flex-shrink: 0;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    align-items: flex-end;
+  }
+
+  .accordian.active {
+    width: 100%;
+    height: 20rem;
+    transition: all 500ms ease;
+  }
+}

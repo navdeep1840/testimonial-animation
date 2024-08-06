@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section class="accordian-wrapper">
+      <div class="accordian active">
+        <h3>01</h3>
+        <p>Ray Allen</p>
+      </div>
+      <div class="accordian">
+        <h3>01</h3>
+        <p>Ray Allen</p>
+      </div>
+      <div class="accordian">
+        <div class="accordian-content">
+          <div class="accordian-closed-content">
+            <h3 class="accordian-number">01</h3>
+            <p class="accordian-name">Ray Allen</p>
+          </div>
+
+          <div class="accordian-open-content">
+            <h3 class="accordian-number">01</h3>
+
+            <p class="accordian-title">
+              Ray Allen Manufacturing | 975 Ford Street Colorado Springs, CO
+              80915
+            </p>
+            <p class="accordian-desc">
+              What sets Kensium apart is their ability to streamline operations
+              and enhance productivity through their seamless integration
+              solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="accordian"
+        style="background-image: url('./assets/poster.png')"
+      >
+        <div class="accordian-content">
+          <div class="accordian-closed-content">
+            <h3 class="accordian-number">04</h3>
+            <p class="accordian-name">Ray Allen</p>
+          </div>
+
+          <div class="accordian-open-content">
+            <h3 class="accordian-number">01</h3>
+
+            <p class="accordian-title">
+              Ray Allen Manufacturing | 975 Ford Street Colorado Springs, CO
+              80915
+            </p>
+            <p class="accordian-desc">
+              What sets Kensium apart is their ability to streamline operations
+              and enhance productivity through their seamless integration
+              solutions.
+            </p>
+          </div>
+        </div>
+
+        <div class="video-container">
+          <video
+            class="accordian-video"
+            src="./assets/Figma video.mp4"
+            poster="./assets/poster.png"
+          ></video>
+        </div>
+
+        <div class="video-button-container">
+          <button class="play-button">Play</button>
+          <button class="pause-button">Pause</button>
+        </div>
+      </div>
+      <div class="accordian">
+        <h3>01</h3>
+        <p>Ray Allen</p>
+      </div>
+    </section>
+    <script src="./index.js"></script>
+  </body>
+</html>
